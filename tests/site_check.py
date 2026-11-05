@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SHOTS = ROOT / "tests" / "screenshots"
 PORT = 5599
 BASE = f"http://localhost:{PORT}/"
-PAGES = ["index", "about", "products", "api-intermediates", "manufacturing",
+PAGES = ["index", "about", "products", "tablets", "capsules", "syrups", "ointments", "api-intermediates", "manufacturing",
          "quality", "research", "why-us", "contact", "404"]
 VIEWPORTS = {"desktop": (1440, 900), "tablet": (768, 1024), "mobile": (360, 780)}
 EXTERNAL_OK = ("fonts.googleapis.com", "fonts.gstatic.com", "google.com/maps", "maps.gstatic", "googleapis")

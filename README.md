@@ -18,7 +18,8 @@ Then open http://localhost:5500. Any static server works (VS Code Live Server, `
 ## Folder structure
 
 ```
-index.html  about.html  products.html  api-intermediates.html  manufacturing.html
+index.html  about.html  products.html  tablets.html  capsules.html  syrups.html  ointments.html
+api-intermediates.html  manufacturing.html
 quality.html  research.html  why-us.html  contact.html  404.html
 .htaccess                  Apache: serves 404.html for missing URLs
 components/
@@ -45,6 +46,7 @@ assets/
     og/                    1200×630 social share image
 content.md                 all text from the PPT, palette, open questions for the client
 tools/seo_head.py          regenerates the <head> (meta, OG, schema.org) of every page
+tools/build_dosage_pages.py  builds tablets/capsules/syrups/ointments.html from products.html
 tests/site_check.py        Playwright test suite (see below)
 ```
 
@@ -67,6 +69,11 @@ The site URL is set at the top (`SITE`); it currently assumes `https://www.plaks
 **Products.** Product cards are plain HTML in `products.html`. Filtering reads `data-area` and `data-form`
 on each `[data-filter-item]`; the search covers the card text. APIs/intermediates are table rows in
 `api-intermediates.html` (`data-cat` drives the API category chips).
+
+`tablets.html`, `capsules.html`, `syrups.html` and `ointments.html` are generated from the cards in
+`products.html`, so never edit them by hand. After adding, removing or changing a product in
+`products.html`, run `py tools/build_dosage_pages.py` then `py tools/seo_head.py`. Also update the
+hand-typed counts on `products.html` (banner numbers and the brand count on each dosage-form card).
 
 **Enquiry form.** By default the form validates, then opens the visitor's email app addressed to
 `data-mailto`. To send without the email app, create a Formspree form and set

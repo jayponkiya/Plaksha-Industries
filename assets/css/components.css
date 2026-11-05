@@ -887,6 +887,9 @@
 /* Deep ink-green footer in both themes, so it never blends into the last section */
 .site-footer {
   position: relative;
+  /* flow-root stops the CTA's negative margin collapsing into this one,
+     so the card actually overlaps the footer's top edge */
+  display: flow-root;
   margin-top: calc(var(--space-section) + 80px);
   background: var(--c-footer-bg);
   font-size: var(--fs-sm);

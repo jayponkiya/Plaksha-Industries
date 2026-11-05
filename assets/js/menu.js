@@ -70,7 +70,14 @@
       var p = parts(item);
 
       // Click / tap toggles (desktop + mobile accordion)
-      p.btn.addEventListener("click", function () {
+      p.btn.addEventListener("click", function (e) {
+        // Desktop: a toggle with data-href is also a page link (hover opens its menu);
+        // on mobile it stays a plain accordion toggle
+        var href = p.btn.getAttribute("data-href");
+        if (href && DESKTOP.matches && e.detail > 0) {
+          location.href = href;
+          return;
+        }
         if (DESKTOP.matches && item._hoverOpened) {
           // already opened by hover: a click should keep it open, not flicker shut
           item._hoverOpened = false;

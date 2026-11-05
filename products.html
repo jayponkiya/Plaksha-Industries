@@ -91,8 +91,23 @@
           <p class="eyebrow" data-reveal>Product portfolio</p>
           <h1 id="page-title" data-reveal data-reveal-delay="80">Finished Dosages</h1>
           <p class="lead" data-reveal data-reveal-delay="160">Our extensive generics portfolio covers all the major therapeutic areas, in tablets, capsules, syrups and ointments.</p>
+          <div class="banner-actions" data-reveal data-reveal-delay="220">
+            <a class="btn btn--primary" href="#therapeutic-areas">Browse catalogue <svg class="icon icon--sm icon--arrow"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn--ghost" href="contact.html?enquiry=catalogue#enquiry">Request full catalogue</a>
+          </div>
+          <ul class="banner-facts" role="list" data-reveal data-reveal-delay="280">
+            <li><strong>19</strong><span>Listed brands</span></li>
+            <li><strong>7</strong><span>Therapeutic areas</span></li>
+            <li><strong>4</strong><span>Dosage forms</span></li>
+          </ul>
         </div>
-        <div class="banner-art" aria-hidden="true"><div class="banner-art__ring"></div><div class="banner-art__core glass"><svg class="icon"><use href="#i-capsule"/></svg></div></div>
+        <div class="banner-art banner-art--products" aria-hidden="true">
+          <div class="banner-art__ring"></div>
+          <div class="banner-art__core glass"><svg class="icon"><use href="#i-capsule"/></svg></div>
+          <span class="banner-art__chip glass" style="top:4%;left:-18%"><svg class="icon"><use href="#i-tablet"/></svg>Tablets</span>
+          <span class="banner-art__chip glass" style="top:44%;right:-22%"><svg class="icon"><use href="#i-syrup"/></svg>Syrups</span>
+          <span class="banner-art__chip glass" style="bottom:2%;left:-6%"><svg class="icon"><use href="#i-tube"/></svg>Ointments</span>
+        </div>
       </div>
     </section>
 
@@ -105,21 +120,29 @@
           <p class="lead">Medicinal products aimed at the treatment of infections, pain, diabetes, bacterial infections, hypertension, allergies and the gastro-intestinal tract.</p>
         </div>
         <div class="grid grid--cards grid--4">
-          <a class="card card--compact feature-card" href="#tablets" style="text-decoration:none" data-reveal>
-            <span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><h3>Tablets</h3><p>Oral solid dosage across major therapies.</p>
-            <span class="feature-card__link">View tablets <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></span>
+          <a class="form-card form-card--green" href="tablets.html" data-reveal>
+            <span class="form-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span>
+            <span class="form-card__count"><strong>14</strong> brands</span>
+            <h3>Tablets</h3><p>Oral solid dosage across major therapies.</p>
+            <span class="form-card__link">View tablets <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></span>
           </a>
-          <a class="card card--compact feature-card" href="#capsules" style="text-decoration:none" data-reveal data-reveal-delay="80">
-            <span class="icon-badge icon-badge--teal"><svg class="icon"><use href="#i-capsule"/></svg></span><h3>Capsules</h3><p>Oral solid dosage (OSD) formulations.</p>
-            <span class="feature-card__link">View capsules <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></span>
+          <a class="form-card form-card--teal" href="capsules.html" data-reveal data-reveal-delay="80">
+            <span class="form-card__icon"><svg class="icon"><use href="#i-capsule"/></svg></span>
+            <span class="form-card__count"><strong>1</strong> brand</span>
+            <h3>Capsules</h3><p>Oral solid dosage (OSD) formulations.</p>
+            <span class="form-card__link">View capsules <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></span>
           </a>
-          <a class="card card--compact feature-card" href="#syrups" style="text-decoration:none" data-reveal data-reveal-delay="160">
-            <span class="icon-badge icon-badge--orange"><svg class="icon"><use href="#i-syrup"/></svg></span><h3>Syrups</h3><p>Syrups, suspensions and dry syrups.</p>
-            <span class="feature-card__link">View syrups <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></span>
+          <a class="form-card form-card--orange" href="syrups.html" data-reveal data-reveal-delay="160">
+            <span class="form-card__icon"><svg class="icon"><use href="#i-syrup"/></svg></span>
+            <span class="form-card__count"><strong>4</strong> brands</span>
+            <h3>Syrups</h3><p>Syrups, suspensions and dry syrups.</p>
+            <span class="form-card__link">View syrups <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></span>
           </a>
-          <a class="card card--compact feature-card" href="#ointments" style="text-decoration:none" data-reveal data-reveal-delay="240">
-            <span class="icon-badge"><svg class="icon"><use href="#i-tube"/></svg></span><h3>Ointments</h3><p>Topical formulations, available on enquiry.</p>
-            <span class="feature-card__link">View ointments <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></span>
+          <a class="form-card form-card--blue" href="ointments.html" data-reveal data-reveal-delay="240">
+            <span class="form-card__icon"><svg class="icon"><use href="#i-tube"/></svg></span>
+            <span class="form-card__count">On enquiry</span>
+            <h3>Ointments</h3><p>Topical formulations, made to your requirement.</p>
+            <span class="form-card__link">Ask about ointments <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></span>
           </a>
         </div>
       </div>
@@ -136,11 +159,12 @@
           <p class="result-count" data-filter-count aria-live="polite"></p>
         </div>
 
+        <div class="catalogue-panel" data-reveal>
         <div class="filter-bar">
           <label class="search">
             <span class="sr-only">Search products</span>
             <svg class="icon"><use href="#i-search"/></svg>
-            <input type="search" placeholder="Search brand or molecule, e.g. Paracetamol" data-filter-search autocomplete="off">
+            <input type="search" placeholder="Search brand or molecule…" data-filter-search autocomplete="off">
           </label>
           <div class="chip-group" data-filter-group="form" role="group" aria-label="Filter by dosage form">
             <button class="chip" type="button" data-filter="all" aria-pressed="true">All forms</button>
@@ -150,7 +174,9 @@
             <button class="chip" type="button" data-filter="ointments" aria-pressed="false">Ointments</button>
           </div>
         </div>
-        <div class="chip-group" data-filter-group="area" role="group" aria-label="Filter by therapeutic area" style="margin-bottom:32px">
+        <div class="catalogue-panel__areas">
+        <span class="catalogue-panel__label">Therapeutic area</span>
+        <div class="chip-group" data-filter-group="area" role="group" aria-label="Filter by therapeutic area">
           <button class="chip" type="button" data-filter="all" aria-pressed="true"><svg class="icon"><use href="#i-filter"/></svg>All areas</button>
           <button class="chip" type="button" data-filter="anti-infective" aria-pressed="false">Anti-infective</button>
           <button class="chip" type="button" data-filter="analgesic" aria-pressed="false">Analgesic</button>
@@ -160,121 +186,123 @@
           <button class="chip" type="button" data-filter="anti-allergic" aria-pressed="false">Anti-allergic</button>
           <button class="chip" type="button" data-filter="gastro-intestinal" aria-pressed="false">Gastro-intestinal</button>
         </div>
+        </div>
+        </div>
 
-        <div class="grid grid--cards" style="--min:250px" data-stagger>
-          <article class="card product-card" data-filter-item data-area="analgesic" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">ACEPIL</h3><p class="product-card__comp">Aceclofenac 100mg</p>
-            <div class="badge-row"><span class="badge badge--orange">Analgesic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=ACEPIL#enquiry" aria-label="Enquire about ACEPIL">Enquire</a></div>
+        <div class="grid grid--cards product-grid" style="--min:260px" data-stagger>
+          <article class="product-card" data-filter-item data-area="analgesic" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">ACEPIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Aceclofenac 100mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--orange">Analgesic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=ACEPIL#enquiry" aria-label="Enquire about ACEPIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="analgesic" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">ACEP-PIL</h3><p class="product-card__comp">Aceclofenac 100mg + Paracetamol 325mg</p>
-            <div class="badge-row"><span class="badge badge--orange">Analgesic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=ACEP-PIL#enquiry" aria-label="Enquire about ACEP-PIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="analgesic" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">ACEP-PIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Aceclofenac 100mg + Paracetamol 325mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--orange">Analgesic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=ACEP-PIL#enquiry" aria-label="Enquire about ACEP-PIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="antibiotic anti-infective" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">AZIPIL</h3><p class="product-card__comp">Azithromycin 250mg and 500mg</p>
-            <div class="badge-row"><span class="badge">Antibiotic</span><span class="badge badge--teal">Anti-infective</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=AZIPIL#enquiry" aria-label="Enquire about AZIPIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="antibiotic anti-infective" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">AZIPIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Azithromycin 250mg and 500mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge">Antibiotic</span><span class="badge badge--teal">Anti-infective</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=AZIPIL#enquiry" aria-label="Enquire about AZIPIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="antibiotic anti-infective" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">CEFAPIL</h3><p class="product-card__comp">Cefixime 200mg</p>
-            <div class="badge-row"><span class="badge">Antibiotic</span><span class="badge badge--teal">Anti-infective</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=CEFAPIL#enquiry" aria-label="Enquire about CEFAPIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="antibiotic anti-infective" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">CEFAPIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Cefixime 200mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge">Antibiotic</span><span class="badge badge--teal">Anti-infective</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=CEFAPIL#enquiry" aria-label="Enquire about CEFAPIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="gastro-intestinal" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">PENTAPIL</h3><p class="product-card__comp">Pantoprazole Sodium 40mg</p>
-            <div class="badge-row"><span class="badge badge--teal">Gastro-intestinal</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=PENTAPIL#enquiry" aria-label="Enquire about PENTAPIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="gastro-intestinal" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">PENTAPIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Pantoprazole Sodium 40mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--teal">Gastro-intestinal</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=PENTAPIL#enquiry" aria-label="Enquire about PENTAPIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="gastro-intestinal" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">ESMPIL</h3><p class="product-card__comp">Esomeprazole 40mg</p>
-            <div class="badge-row"><span class="badge badge--teal">Gastro-intestinal</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=ESMPIL#enquiry" aria-label="Enquire about ESMPIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="gastro-intestinal" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">ESMPIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Esomeprazole 40mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--teal">Gastro-intestinal</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=ESMPIL#enquiry" aria-label="Enquire about ESMPIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="anti-allergic" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">LEVOCPIL</h3><p class="product-card__comp">Levocetirizine Dihydrochloride 5mg</p>
-            <div class="badge-row"><span class="badge">Anti-allergic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=LEVOCPIL#enquiry" aria-label="Enquire about LEVOCPIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="anti-allergic" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">LEVOCPIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Levocetirizine Dihydrochloride 5mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge">Anti-allergic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=LEVOCPIL#enquiry" aria-label="Enquire about LEVOCPIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="anti-diabetic" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">METPIL</h3><p class="product-card__comp">Metformin 500mg and 1000mg</p>
-            <div class="badge-row"><span class="badge badge--teal">Anti-diabetic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=METPIL#enquiry" aria-label="Enquire about METPIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="anti-diabetic" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">METPIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Metformin 500mg and 1000mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--teal">Anti-diabetic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=METPIL#enquiry" aria-label="Enquire about METPIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="anti-diabetic" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">GPMPIL</h3><p class="product-card__comp">Glimepiride 2mg + Pioglitazone 5mg + Metformin 500mg; Glimepiride 1mg + Pioglitazone 15mg + Metformin 1000mg</p>
-            <div class="badge-row"><span class="badge badge--teal">Anti-diabetic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=GPMPIL#enquiry" aria-label="Enquire about GPMPIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="anti-diabetic" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">GPMPIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Glimepiride 2mg + Pioglitazone 5mg + Metformin 500mg; Glimepiride 1mg + Pioglitazone 15mg + Metformin 1000mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--teal">Anti-diabetic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=GPMPIL#enquiry" aria-label="Enquire about GPMPIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="anti-hypertensive" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">TELMIPIL</h3><p class="product-card__comp">Telmisartan 40mg</p>
-            <div class="badge-row"><span class="badge badge--orange">Anti-hypertensive</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=TELMIPIL#enquiry" aria-label="Enquire about TELMIPIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="anti-hypertensive" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">TELMIPIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Telmisartan 40mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--orange">Anti-hypertensive</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=TELMIPIL#enquiry" aria-label="Enquire about TELMIPIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="anti-hypertensive" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">TELMI-APIL</h3><p class="product-card__comp">Telmisartan 40mg + Amlodipine 5mg</p>
-            <div class="badge-row"><span class="badge badge--orange">Anti-hypertensive</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=TELMI-APIL#enquiry" aria-label="Enquire about TELMI-APIL">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="anti-hypertensive" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">TELMI-APIL</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Telmisartan 40mg + Amlodipine 5mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--orange">Anti-hypertensive</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=TELMI-APIL#enquiry" aria-label="Enquire about TELMI-APIL">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="anti-allergic" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">MONTELINK-LC</h3><p class="product-card__comp">Montelukast 10mg + Levocetirizine 5mg</p>
-            <div class="badge-row"><span class="badge">Anti-allergic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=MONTELINK-LC#enquiry" aria-label="Enquire about MONTELINK-LC">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="anti-allergic" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">MONTELINK-LC</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Montelukast 10mg + Levocetirizine 5mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge">Anti-allergic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=MONTELINK-LC#enquiry" aria-label="Enquire about MONTELINK-LC">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="analgesic" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">FEVERLINK-650</h3><p class="product-card__comp">Paracetamol 650mg</p>
-            <div class="badge-row"><span class="badge badge--orange">Analgesic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=FEVERLINK-650#enquiry" aria-label="Enquire about FEVERLINK-650">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="analgesic" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">FEVERLINK-650</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Paracetamol 650mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--orange">Analgesic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=FEVERLINK-650#enquiry" aria-label="Enquire about FEVERLINK-650">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="analgesic" data-form="tablets">
-            <div class="product-card__top"><span class="icon-badge"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="badge badge--neutral">Tablet</span></div>
-            <h3 class="product-card__name">FEVERLINK-500</h3><p class="product-card__comp">Paracetamol 500mg</p>
-            <div class="badge-row"><span class="badge badge--orange">Analgesic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Tablet</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=FEVERLINK-500#enquiry" aria-label="Enquire about FEVERLINK-500">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="analgesic" data-form="tablets">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-tablet"/></svg></span><span class="product-card__form">Tablet</span></div>
+            <h3 class="product-card__name">FEVERLINK-500</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Paracetamol 500mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--orange">Analgesic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=FEVERLINK-500#enquiry" aria-label="Enquire about FEVERLINK-500">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="gastro-intestinal" data-form="capsules">
-            <div class="product-card__top"><span class="icon-badge icon-badge--teal"><svg class="icon"><use href="#i-capsule"/></svg></span><span class="badge badge--neutral">Capsule</span></div>
-            <h3 class="product-card__name">PANTOLINK-DSR</h3><p class="product-card__comp">Pantoprazole 40mg + Domperidone 30mg</p>
-            <div class="badge-row"><span class="badge badge--teal">Gastro-intestinal</span></div>
-            <div class="product-card__foot"><span class="text-muted">Capsule</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=PANTOLINK-DSR#enquiry" aria-label="Enquire about PANTOLINK-DSR">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="gastro-intestinal" data-form="capsules">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-capsule"/></svg></span><span class="product-card__form">Capsule</span></div>
+            <h3 class="product-card__name">PANTOLINK-DSR</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Pantoprazole 40mg + Domperidone 30mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--teal">Gastro-intestinal</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=PANTOLINK-DSR#enquiry" aria-label="Enquire about PANTOLINK-DSR">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="anti-allergic" data-form="syrups">
-            <div class="product-card__top"><span class="icon-badge icon-badge--orange"><svg class="icon"><use href="#i-syrup"/></svg></span><span class="badge badge--neutral">Syrup</span></div>
-            <h3 class="product-card__name">COUGHLINK-DEX</h3><p class="product-card__comp">Dextro 10mg + Phenylephrine 5mg + Chlorpheniramine 2mg per 5ml (60ml &amp; 100ml)</p>
-            <div class="badge-row"><span class="badge">Anti-allergic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Syrup</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=COUGHLINK-DEX#enquiry" aria-label="Enquire about COUGHLINK-DEX">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="anti-allergic" data-form="syrups">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-syrup"/></svg></span><span class="product-card__form">Syrup</span></div>
+            <h3 class="product-card__name">COUGHLINK-DEX</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Dextro 10mg + Phenylephrine 5mg + Chlorpheniramine 2mg per 5ml (60ml &amp; 100ml)</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge">Anti-allergic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=COUGHLINK-DEX#enquiry" aria-label="Enquire about COUGHLINK-DEX">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="anti-allergic" data-form="syrups">
-            <div class="product-card__top"><span class="icon-badge icon-badge--orange"><svg class="icon"><use href="#i-syrup"/></svg></span><span class="badge badge--neutral">Suspension</span></div>
-            <h3 class="product-card__name">MONTELINK-L</h3><p class="product-card__comp">Montelukast 4mg + Levocetirizine 2.5mg</p>
-            <div class="badge-row"><span class="badge">Anti-allergic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Suspension</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=MONTELINK-L%20Susp#enquiry" aria-label="Enquire about MONTELINK-L suspension">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="anti-allergic" data-form="syrups">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-syrup"/></svg></span><span class="product-card__form">Suspension</span></div>
+            <h3 class="product-card__name">MONTELINK-L</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Montelukast 4mg + Levocetirizine 2.5mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge">Anti-allergic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=MONTELINK-L%20Susp#enquiry" aria-label="Enquire about MONTELINK-L suspension">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="antibiotic anti-infective" data-form="syrups">
-            <div class="product-card__top"><span class="icon-badge icon-badge--orange"><svg class="icon"><use href="#i-syrup"/></svg></span><span class="badge badge--neutral">Dry syrup</span></div>
-            <h3 class="product-card__name">CEFILINK-50</h3><p class="product-card__comp">Cefixime 50mg</p>
-            <div class="badge-row"><span class="badge">Antibiotic</span><span class="badge badge--teal">Anti-infective</span></div>
-            <div class="product-card__foot"><span class="text-muted">Dry syrup</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=CEFILINK-50%20Dry%20Syrup#enquiry" aria-label="Enquire about CEFILINK-50 dry syrup">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="antibiotic anti-infective" data-form="syrups">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-syrup"/></svg></span><span class="product-card__form">Dry syrup</span></div>
+            <h3 class="product-card__name">CEFILINK-50</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Cefixime 50mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge">Antibiotic</span><span class="badge badge--teal">Anti-infective</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=CEFILINK-50%20Dry%20Syrup#enquiry" aria-label="Enquire about CEFILINK-50 dry syrup">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
-          <article class="card product-card" data-filter-item data-area="analgesic" data-form="syrups">
-            <div class="product-card__top"><span class="icon-badge icon-badge--orange"><svg class="icon"><use href="#i-syrup"/></svg></span><span class="badge badge--neutral">Suspension</span></div>
-            <h3 class="product-card__name">FEVERLINK-250</h3><p class="product-card__comp">Paracetamol 250mg</p>
-            <div class="badge-row"><span class="badge badge--orange">Analgesic</span></div>
-            <div class="product-card__foot"><span class="text-muted">Suspension</span><a class="btn btn--sm btn--ghost" href="contact.html?interest=finished-dosages&amp;product=FEVERLINK-250%20Susp#enquiry" aria-label="Enquire about FEVERLINK-250 suspension">Enquire</a></div>
+          <article class="product-card" data-filter-item data-area="analgesic" data-form="syrups">
+            <div class="product-card__head"><span class="product-card__icon"><svg class="icon"><use href="#i-syrup"/></svg></span><span class="product-card__form">Suspension</span></div>
+            <h3 class="product-card__name">FEVERLINK-250</h3>
+            <p class="product-card__comp"><span class="product-card__label">Composition</span>Paracetamol 250mg</p>
+            <div class="product-card__foot"><div class="badge-row"><span class="badge badge--orange">Analgesic</span></div><a class="product-card__cta" href="contact.html?interest=finished-dosages&amp;product=FEVERLINK-250%20Susp#enquiry" aria-label="Enquire about FEVERLINK-250 suspension">Enquire <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></a></div>
           </article>
         </div>
 
@@ -291,35 +319,59 @@
 
     <!-- Medical consumables (slide 7) -->
     <section class="section" aria-labelledby="consumables-title">
-      <div class="container container--wide split split--wide-text">
-        <div data-reveal>
-          <p class="eyebrow">Also supplied</p>
-          <h2 id="consumables-title">Medical &amp; surgical consumables</h2>
+      <div class="container container--wide">
+        <div class="section-head section-head--split" data-reveal>
+          <div>
+            <p class="eyebrow">Also supplied</p>
+            <h2 id="consumables-title">Medical &amp; surgical consumables</h2>
+          </div>
           <p class="lead">Alongside our formulations, we supply a range of hospital and lab consumables.</p>
-          <ul class="chip-list" role="list" style="margin-block:24px 32px">
-            <li><span class="chip-link">Urine Bag</span></li>
-            <li><span class="chip-link">Intravenous Cannula</span></li>
-            <li><span class="chip-link">Blood Administration Set</span></li>
-            <li><span class="chip-link">Surgical Gloves (Latex, Sterile Powdered)</span></li>
-            <li><span class="chip-link">Examination Gloves</span></li>
-            <li><span class="chip-link">Plaster of Paris Bandage (POP)</span></li>
-            <li><span class="chip-link">Microporous Surgical Paper Tape</span></li>
-            <li><span class="chip-link">Cotton Crepe Bandage</span></li>
-            <li><span class="chip-link">Absorbent Cotton Wool 50g &amp; 500g</span></li>
-            <li><span class="chip-link">Roller Gauze Bandage</span></li>
-            <li><span class="chip-link">Infusion Set, Economy-1000</span></li>
-            <li><span class="chip-link">Infusion Set, Micro IV Set</span></li>
-            <li><span class="chip-link">K3 EDTA 2ml Tube (Micro Spray Coating PP)</span></li>
-            <li><span class="chip-link">Clot Activator 4ml Tube PP</span></li>
-            <li><span class="chip-link">Fluoride 2ml Tube</span></li>
-          </ul>
-          <a class="btn btn--primary" href="contact.html?interest=consumables#enquiry">Enquire about consumables</a>
         </div>
-        <div class="illus" data-reveal data-reveal-delay="120" aria-hidden="true">
-          <div class="illus__orb"><svg class="icon"><use href="#i-package"/></svg></div>
-          <span class="illus__chip glass" style="top:14%;left:8%"><svg class="icon"><use href="#i-droplet"/></svg> IV &amp; infusion</span>
-          <span class="illus__chip glass" style="bottom:16%;right:8%"><svg class="icon"><use href="#i-shield"/></svg> Surgical</span>
-          <span class="illus__chip glass" style="top:20%;right:10%"><svg class="icon"><use href="#i-flask"/></svg> Lab tubes</span>
+        <div class="grid grid--cards grid--4">
+          <div class="supply-group supply-group--teal">
+            <span class="supply-group__icon"><svg class="icon"><use href="#i-droplet"/></svg></span>
+            <h3>IV, infusion &amp; drainage</h3>
+            <ul role="list">
+              <li>Intravenous Cannula</li>
+              <li>Blood Administration Set</li>
+              <li>Infusion Set, Economy-1000</li>
+              <li>Infusion Set, Micro IV Set</li>
+              <li>Urine Bag</li>
+            </ul>
+          </div>
+          <div class="supply-group supply-group--green">
+            <span class="supply-group__icon"><svg class="icon"><use href="#i-shield"/></svg></span>
+            <h3>Gloves</h3>
+            <ul role="list">
+              <li>Surgical Gloves (Latex, Sterile Powdered)</li>
+              <li>Examination Gloves</li>
+            </ul>
+          </div>
+          <div class="supply-group supply-group--orange">
+            <span class="supply-group__icon"><svg class="icon"><use href="#i-heart-pulse"/></svg></span>
+            <h3>Wound care &amp; dressings</h3>
+            <ul role="list">
+              <li>Plaster of Paris Bandage (POP)</li>
+              <li>Microporous Surgical Paper Tape</li>
+              <li>Cotton Crepe Bandage</li>
+              <li>Roller Gauze Bandage</li>
+              <li>Absorbent Cotton Wool 50g &amp; 500g</li>
+            </ul>
+          </div>
+          <div class="supply-group supply-group--blue">
+            <span class="supply-group__icon"><svg class="icon"><use href="#i-flask"/></svg></span>
+            <h3>Lab &amp; collection tubes</h3>
+            <ul role="list">
+              <li>K3 EDTA 2ml Tube (Micro Spray Coating PP)</li>
+              <li>Clot Activator 4ml Tube PP</li>
+              <li>Fluoride 2ml Tube</li>
+            </ul>
+          </div>
+        </div>
+        <div class="supply-cta" data-reveal>
+          <span class="supply-cta__icon"><svg class="icon"><use href="#i-package"/></svg></span>
+          <p><strong>Need consumables in bulk?</strong> Tell us the items and quantities and we'll send a quote.</p>
+          <a class="btn btn--primary" href="contact.html?interest=consumables#enquiry">Enquire about consumables <svg class="icon icon--sm icon--arrow"><use href="#i-arrow-right"/></svg></a>
         </div>
       </div>
     </section>
