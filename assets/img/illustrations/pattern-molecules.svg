@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="194" viewBox="0 0 168 194" fill="none" stroke="#1f8a14" stroke-width="1.2" stroke-opacity="0.35">
+  <!-- hexagonal ring (benzene-like) -->
+  <path d="M42 20 66 34v28L42 76 18 62V34Z"/>
+  <path d="M42 30 57 39v18L42 66 27 57V39Z" stroke-opacity="0.18"/>
+  <!-- bonds out to neighbours -->
+  <path d="M66 34 96 18M66 62l30 16M42 76v30"/>
+  <circle cx="96" cy="18" r="4"/>
+  <circle cx="96" cy="78" r="5" stroke="#0f7c74"/>
+  <circle cx="42" cy="106" r="3"/>
+  <!-- second ring -->
+  <path d="M126 112 150 126v28l-24 14-24-14v-28Z"/>
+  <path d="M96 78l30 34" stroke-dasharray="3 5"/>
+  <path d="M150 126 168 116M102 154 84 168M0 116l18 0"/>
+  <circle cx="126" cy="140" r="2.5" fill="#e77d27" fill-opacity="0.35" stroke="none"/>
+  <circle cx="42" cy="48" r="2.5" fill="#e77d27" fill-opacity="0.35" stroke="none"/>
+</svg>

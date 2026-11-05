@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Plaksha Industries — Design tokens
+   Brand source: Plaksha_Logo.png  →  leaf green #28A01B, trunk orange #E77D27
+   Theme: light by default, dark via [data-theme="dark"] (set by theme.js from
+   localStorage or prefers-color-scheme).
+   ========================================================================== */
+
+:root {
+  /* ---- Brand (raw, theme-independent) ---- */
+  --brand-green: #28a01b;
+  --brand-green-600: #1f8a14;
+  --brand-green-700: #1b7413;
+  --brand-green-800: #145a0e;
+  --brand-teal: #0f7c74;
+  --brand-teal-700: #0b6159;
+  --brand-orange: #e77d27;
+  --brand-orange-700: #b85d14;
+  --brand-ink: #0c0e0d;
+
+  /* ---- Typography ---- */
+  --font-heading: "Sora", "Poppins", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Fluid type scale: min @ 360px → max @ 1440px */
+  --fs-xs: clamp(0.75rem, 0.73rem + 0.09vw, 0.8125rem);
+  --fs-sm: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+  --fs-base: clamp(1rem, 0.97rem + 0.14vw, 1.0625rem);
+  --fs-md: clamp(1.125rem, 1.06rem + 0.28vw, 1.3125rem);
+  --fs-lg: clamp(1.25rem, 1.12rem + 0.56vw, 1.625rem);
+  --fs-xl: clamp(1.5rem, 1.25rem + 1.11vw, 2.25rem);
+  --fs-2xl: clamp(1.875rem, 1.42rem + 2vw, 3.25rem);
+  --fs-3xl: clamp(2.25rem, 1.58rem + 2.96vw, 4.25rem);
+
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-body: 1.65;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ---- 8px spacing grid ---- */
+  --space-0-5: 4px;
+  --space-1: 8px;
+  --space-1-5: 12px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-section: clamp(48px, 2.5rem + 3vw, 88px);
+
+  /* ---- Radius ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 999px;
+
+  /* ---- Layout ---- */
+  --container: 1240px;
+  --container-wide: 1400px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --header-h: 84px;
+  --header-h-shrink: 66px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 450ms;
+
+  --z-header: 100;
+  --z-dropdown: 110;
+  --z-drawer: 200;
+  --z-overlay: 190;
+
+  color-scheme: light;
+
+  /* ---- Semantic colours: LIGHT ---- */
+  --c-bg: #f6faf7;
+  --c-bg-alt: #edf5f0;
+  --c-surface: #ffffff;
+  --c-surface-2: #f1f7f3;
+  --c-border: #dbe7df;
+  --c-border-strong: #c3d6ca;
+
+  --c-text: #102018;
+  --c-text-muted: #4a5e53;
+  --c-text-subtle: #5c6e64;
+  --c-heading: #0b1a12;
+
+  --c-primary: var(--brand-green-700);      /* AA on white for text + buttons */
+  --c-primary-hover: var(--brand-green-800);
+  --c-primary-soft: #e3f3df;
+  --c-on-primary: #ffffff;
+  --c-secondary: var(--brand-teal-700);
+  --c-secondary-soft: #dcf0ee;
+  --c-accent: var(--brand-orange);
+  --c-accent-text: #a0500f; /* orange used as text (AA on white and on accent-soft) */
+  --c-accent-soft: #fcebdc;
+
+  --c-link: var(--brand-teal-700);
+  --c-focus: #0f7c74;
+  --c-danger: #c0362c;
+  --c-danger-soft: #fdecea;
+  --c-success: var(--brand-green-700);
+
+  /* Solid brand fills (flat colours only, no blends anywhere on the site) */
+  --c-brand-fill: var(--brand-green-700);
+  --c-brand-fill-hover: var(--brand-green-800);
+  --c-on-brand: #ffffff;
+  --c-cta-bg: var(--brand-teal-700);
+  --c-avatar: var(--brand-green-700);
+  --c-avatar-alt: var(--brand-orange-700);
+  --c-progress: var(--brand-orange);
+
+  /* Deep brand band (".section--dark") */
+  --band-bg: #0b473b;
+  --c-footer-bg: #082c24;
+  --band-text: #cfe6db;
+  --band-muted: #a6c8b9;
+  --band-heading: #ffffff;
+  --band-card: rgba(255, 255, 255, 0.06);
+  --band-border: rgba(255, 255, 255, 0.12);
+
+  --pattern-opacity: 0.5;
+
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-strong: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-blur: 16px;
+
+  --shadow-xs: 0 1px 2px rgba(16, 32, 24, 0.06);
+  --shadow-sm: 0 2px 8px rgba(16, 32, 24, 0.06), 0 1px 2px rgba(16, 32, 24, 0.04);
+  --shadow-md: 0 8px 24px rgba(16, 32, 24, 0.08), 0 2px 6px rgba(16, 32, 24, 0.04);
+  --shadow-lg: 0 24px 48px rgba(16, 32, 24, 0.12), 0 4px 12px rgba(16, 32, 24, 0.05);
+  --shadow-glow: 0 10px 30px rgba(27, 116, 19, 0.28);
+}
+
+/* ---- Semantic colours: DARK ---- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --c-bg: #08120e;
+  --c-bg-alt: #0f1f19;
+  --c-surface: #142a21;
+  --c-surface-2: #193228;
+  --c-border: #244436;
+  --c-border-strong: #2b4d40;
+
+  --c-text: #e3eee8;
+  --c-text-muted: #a7bbb0;
+  --c-text-subtle: #8aa095;
+  --c-heading: #f4faf6;
+
+  --c-primary: #4cc93c;
+  --c-primary-hover: #66d957;
+  --c-primary-soft: rgba(76, 201, 60, 0.14);
+  --c-on-primary: #06120a;
+  --c-secondary: #3cc2b6;
+  --c-secondary-soft: rgba(60, 194, 182, 0.14);
+  --c-accent: #f39a4f;
+  --c-accent-text: #f6a865;
+  --c-accent-soft: rgba(243, 154, 79, 0.14);
+
+  --c-link: #5fd3c7;
+  --c-focus: #5fd3c7;
+  --c-danger: #ff8a80;
+  --c-danger-soft: rgba(255, 138, 128, 0.12);
+  --c-success: #66d957;
+
+  --c-brand-fill: #4cc93c;
+  --c-brand-fill-hover: #66d957;
+  --c-on-brand: #06120a;
+  --c-cta-bg: #0f3d36;
+  --c-avatar: #26781e;
+  --c-avatar-alt: #b85d14;
+  --c-progress: #f39a4f;
+
+  --band-bg: #0f2c25;
+  --c-footer-bg: #06100d;
+  --band-card: rgba(255, 255, 255, 0.05);
+  --band-border: rgba(255, 255, 255, 0.1);
+
+  --pattern-opacity: 0.25;
+
+  --glass-bg: rgba(16, 32, 26, 0.66);
+  --glass-bg-strong: rgba(16, 32, 26, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 10px 30px rgba(76, 201, 60, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}

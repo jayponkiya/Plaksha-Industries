@@ -1,0 +1,2 @@
+# Apache: serve the custom 404 page for missing URLs
+ErrorDocument 404 /404.html
